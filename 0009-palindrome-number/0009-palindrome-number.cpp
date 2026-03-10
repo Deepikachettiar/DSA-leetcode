@@ -21,12 +21,6 @@ public:
             x=x/10;
         }
 
-        if(res==initial)
-        {
-            return true;
-        }
-
-        else
-            return false;
+       return (res==initial);
     }
 };
