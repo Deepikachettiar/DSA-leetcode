@@ -23,4 +23,7 @@ int freq(vector<int>& arr)
             
         }
 
-     
+        printf("Max Freq Element: %d\n", max);
+        printf("Min Freq Element: %d\n", min);
+        return 0;
+}
