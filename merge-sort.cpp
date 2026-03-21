@@ -7,21 +7,20 @@ public:
 
         int i=0;
         int j=0;
-        int k=0;
+
 
         while(i<left.size() && j<right.size())
         {
-            if(left[i]< right[i])
+            if(left[i]< right[j])
             {
                 res.push_back(left[i]);
                 ++i;
-                ++k;
             }
             else
             {
                 res.push_back(right[j]);
                 ++j;
-                ++k;
+
             }
     }
 
@@ -31,7 +30,7 @@ public:
         {
             res.push_back(left[i]);
             ++i;
-            ++k;
+
         }
     }
     else
@@ -39,8 +38,6 @@ public:
         while(j<right.size())
         {
             res.push_back(right[j]);
-            ++j;
-            ++k;
         }
     }
     return res;
