@@ -9,7 +9,7 @@ public:
     {
         if(n==1)
         {
-            return nums;
+            return;
         }
         for(int i=0;i<n-1;i++)
         {
