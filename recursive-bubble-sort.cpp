@@ -1,8 +1,8 @@
 class Solution {
 public:
     vector<int> bubbleSort(vector<int>& nums) {
-        vector<int> sorted=sort(nums,nums.size());
-        return sorted;   
+        sort(nums,nums.size());
+        return nums;   
     }
 
     void sort(vector<int> &nums,int n)
