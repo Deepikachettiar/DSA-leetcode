@@ -13,10 +13,10 @@ public:
 
     void sort(vector<int>& nums,int i)
     {   int key=nums[i];
-        int j=i;
-        while(j>0 && nums[j-1]>key )
+        int j=i-1;
+        while(j>=0 && nums[j]>key )
         {
-            nums[j]=nums[j-1];
+            nums[j+1]=nums[j];
             j--;
         }
         nums[j+1]=key;
