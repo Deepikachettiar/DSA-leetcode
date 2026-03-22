@@ -5,7 +5,7 @@ public:
         return sorted;   
     }
 
-    vector<int> sort(vector<int> &nums,int n)
+    void sort(vector<int> &nums,int n)
     {
         if(n==1)
         {
