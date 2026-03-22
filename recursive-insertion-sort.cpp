@@ -14,11 +14,11 @@ public:
     void sort(vector<int>& nums,int key)
     {
         int j=nums.size();
-        while(j>=0 && nums[j-1]>key )
+        while(j>0 && nums[j-1]>key )
         {
             nums[j]=nums[j-1];
             j--;
         }
-
+        nums[j+1]=key;
     }
 };
