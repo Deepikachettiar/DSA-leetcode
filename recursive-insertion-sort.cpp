@@ -1,11 +1,12 @@
 class Solution {
 public:
     vector<int> insertionSort(vector<int>& nums) {
-        int i=nums.size();
-        while(i>=0)
+        int n=nums.size();
+        int i=0;
+        while(i<n)
         {
             sort(nums,nums[i]);
-            --i;
+            ++i;
         }
         return nums;
     }
