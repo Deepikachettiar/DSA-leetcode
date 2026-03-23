@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     vector<int> quickSort(vector<int>& nums) {
@@ -29,6 +30,9 @@ public:
 
         swap(nums[i],nums[j]);
         swap(nums[l],nums[j]);
-        sort(nums,)
+        sort(nums,l,j-1);
+        sort(nums,j+1,r);
     }
 };
+
+```
