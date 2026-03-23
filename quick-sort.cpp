@@ -25,15 +25,14 @@ public:
                 --j;
             }
 
-            //if(i>=j)
-              //  break;
+            if(i>=j)
+               break;
 
             swap(nums[i],nums[j]);
-            i++;
-            j--;
+            
+            
         }
 
-        swap(nums[i],nums[j]);
         swap(nums[l],nums[j]);
         sort(nums,l,j-1);
         sort(nums,j+1,r);
