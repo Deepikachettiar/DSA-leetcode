@@ -14,24 +14,26 @@ public:
         int j=r;
         int p=nums[l];
 
-        while (i<j)
+        while (i<=j)
         {
-            while(nums[i]<p)
+            while(i<=r && nums[i]<p)
             {
                 ++i;
             }
-            while(nums[j]>p)
+            while(j>=l && nums[j]>p)
             {
                 --j;
             }
 
-            if(i>=j)
-                break;
+            //if(i>=j)
+              //  break;
 
             swap(nums[i],nums[j]);
+            i++;
+            j--;
         }
 
-        //swap(nums[i],nums[j]);
+        swap(nums[i],nums[j]);
         swap(nums[l],nums[j]);
         sort(nums,l,j-1);
         sort(nums,j+1,r);
