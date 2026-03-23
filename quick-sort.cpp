@@ -1,8 +1,7 @@
-
 class Solution {
 public:
     vector<int> quickSort(vector<int>& nums) {
-        sort(nums,0,nums.size());
+        sort(nums,0,nums.size()-1);
         return nums;
     }
 
@@ -11,8 +10,8 @@ public:
         if (l>=r)
             return;
 
-        int i=l;
-        int j=r+1;
+        int i=l+1;
+        int j=r;
         int p=nums[l];
 
         while (i<j)
@@ -23,16 +22,18 @@ public:
             }
             while(nums[j]>p)
             {
-                ++j;
+                --j;
             }
+
+            if(i>=j)
+                break;
+
             swap(nums[i],nums[j]);
         }
 
-        swap(nums[i],nums[j]);
+        //swap(nums[i],nums[j]);
         swap(nums[l],nums[j]);
         sort(nums,l,j-1);
         sort(nums,j+1,r);
     }
 };
-
-```
