@@ -8,12 +8,12 @@ public:
         {
             if(nums[i] > maxi)
             {
-                maxi2 = maxi;   // old largest becomes second largest
-                maxi = nums[i]; // update largest
+                maxi2 = maxi;   
+                maxi = nums[i]; 
             }
             else if(nums[i] > maxi2 && nums[i] != maxi)
             {
-                maxi2 = nums[i]; // update second largest
+                maxi2 = nums[i]; 
             }
         }
 
