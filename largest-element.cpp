@@ -1,22 +1,22 @@
 class Solution {
 public:
     int secondLargestElement(vector<int>& nums) {
-        int maxi = INT_MIN;   // largest
-        int maxi2 = INT_MIN;  // second largest
+        int max = INT_MIN;   // largest
+        int max2 = INT_MIN;  // second largest
 
         for(int i = 0; i < nums.size(); i++)
         {
-            if(nums[i] > maxi)
+            if(nums[i] > max)
             {
-                maxi2 = maxi;   
-                maxi = nums[i]; 
+                max2 = max;   
+                max = nums[i]; 
             }
-            else if(nums[i] > maxi2 && nums[i] != maxi)
+            else if(nums[i] > max2 && nums[i] != max)
             {
-                maxi2 = nums[i]; 
+                max2 = nums[i]; 
             }
         }
 
-        return maxi2;
+        return max2;
     }
 };
