@@ -9,3 +9,8 @@ public:
             {
                 maxi = nums[i];  // update if found larger
             }
+        }
+
+        return maxi;
+    }
+};
