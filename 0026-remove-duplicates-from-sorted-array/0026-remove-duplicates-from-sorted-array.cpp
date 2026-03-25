@@ -11,8 +11,8 @@ public:
                 for(int j=i+1;j<n-1;j++)
                 {
                     nums[j]=nums[j+1];
-                    --n;
                 }
+                --n;
 
             }
 
