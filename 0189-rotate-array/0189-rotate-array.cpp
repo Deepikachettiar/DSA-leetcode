@@ -1,8 +1,8 @@
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
-        int n=nums.size();
-        k=k%n;
+        int n=nums.size();        
+        k=k%n;                          //this will make the k be inside the bounds even when k is exceeding the array size
 
         reverse(nums.begin(),nums.end());
         reverse(nums.begin()+k,nums.end());
