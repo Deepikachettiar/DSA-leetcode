@@ -30,6 +30,7 @@ public:
         j++;
      }
 
-     return s;
+     vector<int> res(s.begin(),s.end());
+     return res;
     }
 };
