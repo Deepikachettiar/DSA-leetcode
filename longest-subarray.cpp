@@ -15,6 +15,7 @@ public:
                 if(sum==k)
                     len=j-i;
                     maxi=max(len,maxi);
+                j++;
             }
         }
 
