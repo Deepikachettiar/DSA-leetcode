@@ -10,7 +10,7 @@ public:
             while(j < nums.size())
             {
                 long long sum=0;
-                sum += nums[i];
+                sum += nums[j];
 
                 if(sum==k)
                     len=j-i;
