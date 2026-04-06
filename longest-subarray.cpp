@@ -13,8 +13,11 @@ public:
                 sum += nums[j];
 
                 if(sum==k)
-                    len=j-i;
+                {
+                    len=j-i+1;
                     maxi=max(len,maxi);
+                }
+                    
                 j++;
             }
         }
