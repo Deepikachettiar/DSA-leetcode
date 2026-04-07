@@ -3,7 +3,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-       unordered_map<int,int> x;    
+       unordered_map<int,int> x;    //key value pair used for hash map
 
        for(int i=0;i<nums.size();i++)
        {
