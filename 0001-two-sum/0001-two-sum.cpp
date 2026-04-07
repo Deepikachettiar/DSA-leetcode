@@ -1,6 +1,28 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
+       unordered_map<int,int> x;
+
+       for(int i=0;i<nums.size();i++)
+       {
+        int rem= target-nums[i];
+
+        if(x.find(rem)!=x.end())
+        {
+            return {x[rem],i};
+        }
+
+        x[nums[i]]=i;   //this stores that previously seen values
+       }
+
+       return {};
+    }
+};
+
+/*
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> sum;
 
         for (int i = 0; i < nums.size(); i++) {
@@ -16,3 +38,4 @@ public:
         return sum;
     }
 };
+*/
