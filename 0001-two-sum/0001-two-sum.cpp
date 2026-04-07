@@ -9,7 +9,7 @@ public:
        {
         int rem= target-nums[i];
 
-        if(x.find(rem)!=x.end())
+        if(x.find(rem)!=x.end())    //checks is the element or the remainder is already vissited before
         {
             return {x[rem],i};
         }
