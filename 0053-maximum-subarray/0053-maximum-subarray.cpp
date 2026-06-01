@@ -18,6 +18,6 @@ public:
             return *max_element(nums.begin(),nums.end());  // this returns the max element value where as without * returns the pointer
 
         else
-            return max;
+            return max;  //else return max value of the sum
     }
 };
