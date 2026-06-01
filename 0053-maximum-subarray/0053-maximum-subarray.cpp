@@ -15,7 +15,7 @@ public:
         }
 
         if(max==0)
-            return *max_element(nums.begin(),nums.end());
+            return *max_element(nums.begin(),nums.end());  // this returns the max element value where as without * returns the pointer
 
         else
             return max;
