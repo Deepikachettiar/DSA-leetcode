@@ -1,5 +1,5 @@
-// have tried this solution by using variables as pointers. this needs extra vector array as space and O(n) time complexity
 
+// have tried this solution by using variables as pointers. this needs extra vector array as space and O(n) time complexity
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
