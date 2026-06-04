@@ -2,7 +2,7 @@ class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
         //find highest i such that ai<ai+1
-        //find j such that aj>ai
+        //find highest j such that aj>ai
         //swap ai and aj
         //reverse array from ai+1 to end
         int n = nums.size();
