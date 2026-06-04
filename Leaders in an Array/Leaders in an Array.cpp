@@ -4,12 +4,13 @@ public:
       int i = nums.size()-2;
       int max=nums[nums.size()-1];
       vector <int> a;
+      a.push_back(nums[nums.size()-1]);
       while(i>=0)
       {
         if(nums[i]>max)
         {
             max=nums[i];
-            insert(a,nums[i])
+            a.push_back(nums[i]);
         }
         i--;
       }
