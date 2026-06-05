@@ -1,3 +1,6 @@
+//here we are taking the first row and column cause the original alues shd be maintained f we take it in 2 loops directly then additional 0s will be converted and leads to different output
+
+
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
