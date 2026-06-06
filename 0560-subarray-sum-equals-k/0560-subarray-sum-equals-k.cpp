@@ -17,7 +17,7 @@ public:
         for(int i=0;i<n;i++)
         {
             presum=presum+nums[i];  //stores the sum of the subset
-            int rem=presum-k;       
+            int rem=presum-k;       //checks if the previous values corresponds and adds up to the value k
 
             if(setsum.find(rem)!=setsum.end())
             {
