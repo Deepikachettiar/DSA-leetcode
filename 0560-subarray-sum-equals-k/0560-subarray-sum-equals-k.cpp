@@ -19,7 +19,7 @@ public:
             presum=presum+nums[i];  //stores the sum of the subset
             int rem=presum-k;       //checks if the previous values corresponds and adds up to the value k
 
-            if(setsum.find(rem)!=setsum.end())
+            if(setsum.find(rem)!=setsum.end())  //.find() finds the value and .end() returns if the values is not there
             {
                 count+=setsum[rem];
             }
