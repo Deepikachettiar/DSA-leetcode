@@ -16,8 +16,8 @@ public:
 
         for(int i=0;i<n;i++)
         {
-            presum=presum+nums[i];
-            int rem=presum-k;
+            presum=presum+nums[i];  //stores the sum of the subset
+            int rem=presum-k;       
 
             if(setsum.find(rem)!=setsum.end())
             {
