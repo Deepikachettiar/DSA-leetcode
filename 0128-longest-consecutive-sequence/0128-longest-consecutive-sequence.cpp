@@ -16,8 +16,8 @@ public:
         {
             if(a.find(x-1) == a.end())
             {
-                int temp=x+1;
-                count=1;
+                int temp=x+1;  //store the present value in a variable and check for the next consecutive number if present then increment count
+                count=1;  // for every iteration initialise the count caule to 1
                 
                 while(a.find(temp)!=a.end())
                 {
