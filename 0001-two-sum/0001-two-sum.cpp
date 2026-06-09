@@ -1,7 +1,8 @@
-//using hash map the optimal solution can be obtained
-//the time complexity is reducced to O(n)
+
 class Solution {
 public:
+//using hash map the optimal solution can be obtained
+//the time complexity is reducced to O(n)
     vector<int> twoSum(vector<int>& nums, int target) {
        unordered_map<int,int> x;    //key value pair used for hash map
 
