@@ -4,7 +4,7 @@ public:
         vector<vector<int>> arr(numRows);
 
         for (int i = 0; i < numRows; i++) {
-            arr[i].resize(i + 1);
+            arr[i].resize(i + 1);  //this makes each ith row with i+1 elements in each row
 
             arr[i][0] = arr[i][i] = 1;
 
