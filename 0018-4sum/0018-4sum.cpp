@@ -4,13 +4,16 @@ public:
         vector<vector<int>> a;
         sort(nums.begin(),nums.end());
 
-        for(int i=0;i<nums.size();i++)
+        if(nums.size()<4)
+            return {};
+
+        for(int i=0;i<nums.size()-3;i++)
         {
             if(i>0 && nums[i]==nums[i-1])
             {
                 continue;
             }
-            for(int j=i+1;j<nums.size();j++)
+            for(int j=i+1;j<nums.size()-2;j++)
             {
                 if(j>i+1 && nums[j]==nums[j-1])
                     continue;
