@@ -1,7 +1,7 @@
 class Solution {
   public:
     int maxLen(vector<int>& arr) {
-        int max=0;
+        int maxi=0;
         for(int i=0;i<arr.size()-1;i++)
         {
             int sum=arr[i];
@@ -13,8 +13,9 @@ class Solution {
                 j++;
                 count++;
             }
+            maxi=max(maxi,count);
         }
 
-        return count;
+        return maxi;
     }
 };
