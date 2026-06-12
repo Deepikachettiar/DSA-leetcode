@@ -1,19 +1,21 @@
 class Solution {
-  public:
+public:
     int maxLen(vector<int>& arr) {
         int maxi=0;
-        for(int i=0;i<arr.size()-1;i++)
+
+        for(int i=0;i<arr.size();i++)
         {
-            int sum=arr[i];
-            int count=0;
-            int j=i+1;
-            while(j<arr.size() && sum==0)
+            int sum=0;
+
+            for(int j=i;j<arr.size();j++)
             {
                 sum+=arr[j];
-                j++;
-                count++;
+
+                if(sum==0)
+                {
+                    maxi=max(maxi,j-i+1);
+                }
             }
-            maxi=max(maxi,count);
         }
 
         return maxi;
