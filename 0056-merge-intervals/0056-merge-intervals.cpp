@@ -15,7 +15,7 @@ public:
             else
             {
                 arr.back()[1]=max(arr.back()[1],x[1]);
-                arr.back()[0]=min(arr.back()[0],x[0]);
+                //arr.back()[0]=min(arr.back()[0],x[0]);
             }
         }
 
