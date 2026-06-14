@@ -7,7 +7,7 @@ public:
 
         for(auto x : intervals)
         {
-            if(arr.empty() || arr.back()[1]< x[0])
+            if(arr.empty() || arr.back()[1]< x[0])  //if not in range of the prewvious just add in the interval
             {
                 arr.push_back(x);
             }
