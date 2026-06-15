@@ -1,3 +1,5 @@
+//this si done in  the way of merge sort but in reverse order... here why merge sort way is not used is because nums1 already containss m+n values and then if we try to go from 0 then there will be a empty vector error
+
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
