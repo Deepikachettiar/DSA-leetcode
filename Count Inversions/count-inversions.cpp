@@ -59,4 +59,9 @@ public:
 
         return ::count;
     }
+/*If you have a local variable and a global variable with the exact same name,
+C++ will always default to using the local one. You use the scope resolution 
+operator with nothing in front of it (::variableName) to tell the compiler, 
+"Ignore the local one; go up to the global scope and use that."*/
+
 };
