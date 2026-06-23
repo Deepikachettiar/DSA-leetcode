@@ -33,7 +33,6 @@ public:
             while (right <= end && nums[i] > 2LL * nums[right]) {
                 right++;
             }
-            // Add the number of valid pairs we found for this specific left element
             count += (right - (mid + 1)); 
         }
         return count;
@@ -45,16 +44,14 @@ public:
         int mid = start + (end - start) / 2;
         int count = 0;
 
-        // 1. Sort and count the left half
+        //Sort and count the left half
         count += mergeSort(nums, start, mid);
         
-        // 2. Sort and count the right half
+        //Sort and count the right half
         count += mergeSort(nums, mid + 1, end);
         
-        // 3. Count the pairs BETWEEN the left and right halves
+        //Count the pairs BETWEEN the left and right halves
         count += countPairs(nums, start, mid, end);
-        
-        // 4. Merge them together
         merge(nums, start, mid, end);
 
         return count;
