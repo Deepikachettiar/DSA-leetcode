@@ -1,3 +1,5 @@
+//this is a easy sum whcih is there but with a small twist.
+
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
