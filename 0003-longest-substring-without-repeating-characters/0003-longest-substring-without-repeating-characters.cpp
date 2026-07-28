@@ -21,3 +21,5 @@ public:
         return maxx;
     }
 };
+
+//can be done using an array that store the index of last seen char and chekcing if it is repeating by compering instead of using unordered pair
