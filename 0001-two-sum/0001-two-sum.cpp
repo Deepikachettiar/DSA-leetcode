@@ -22,6 +22,7 @@ public:
     }
 };
 
+
 //this is brute force method and takes O(n^2)
 /*
 class Solution {
