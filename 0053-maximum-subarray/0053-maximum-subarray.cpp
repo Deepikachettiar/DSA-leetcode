@@ -2,22 +2,14 @@ class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
         int sum=0;
-        int max=0;
+        int maxx=nums[0];
 
-        for(int x : nums)
+        for(int i=0;i<nums.size();i++)
         {
-            sum=sum+x;
-            if (sum<0)
-                sum=0;
-            
-            else if(sum>max)
-                max=sum;
+            sum=max(nums[i],sum+nums[i]);
+            maxx=max(maxx,sum);
         }
-
-        if(max==0)
-            return *max_element(nums.begin(),nums.end());  // this returns the max element value where as without * returns the pointer
-
-        else
-            return max;
+        return maxx;
+        
     }
 };
