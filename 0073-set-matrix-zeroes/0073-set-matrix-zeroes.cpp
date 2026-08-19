@@ -1,62 +1,92 @@
 //here we are taking the first row and column cause the original alues shd be maintained f we take it in 2 loops directly then additional 0s will be converted and leads to different output
 
 
-class Solution {
-public:
-    void setZeroes(vector<vector<int>>& matrix) {
-        bool row1=false;
-        bool col1=false;
+// class Solution {
+// public:
+//     void setZeroes(vector<vector<int>>& matrix) {
+//         bool row1=false;
+//         bool col1=false;
 
-        for(int i=0;i<matrix.size();i++)
+//         for(int i=0;i<matrix.size();i++)
+//         {
+//             if(matrix[i][0]==0)
+//             {
+//                 col1=true;
+//                 break;
+//             }
+//         }
+
+//         for(int j = 0; j < matrix[0].size(); j++) {
+//             if(matrix[0][j] == 0) {
+//                 row1 = true;
+//                 break;
+//             }
+//         }
+
+//         for(int i=1;i<matrix.size();i++)
+//         {
+//             for(int j=1;j<matrix[0].size();j++)
+//             {
+//                 if(matrix[i][j]==0)
+//                 {
+//                     matrix[i][0]=0;
+//                     matrix[0][j]=0;
+
+//                 }
+//             }
+//         }
+
+//         for(int i=1;i<matrix.size();i++)
+//         {
+//             for(int j=1;j<matrix[0].size();j++)
+//             {
+//                 if(matrix[i][0]==0 || matrix[0][j]==0)
+//                 {
+//                     matrix[i][j]=0;
+//                 }
+//             }
+//         }
+
+//          if(row1) {
+//             for(int j = 0; j < matrix[0].size(); j++) {
+//                 matrix[0][j] = 0;
+//             }
+//         }
+
+//         if(col1) {
+//             for(int i = 0; i <matrix.size(); i++) {
+//                 matrix[i][0] = 0;
+//             }
+//         }
+//     }
+// };
+
+class Solution{
+    public:
+        void setZeroes(vector<vector<int>>& matrix)
         {
-            if(matrix[i][0]==0)
+            unordered_set<int> row;
+            unordered_set<int>col;
+            for(int i=0;i<matrix.size();i++)
             {
-                col1=true;
-                break;
-            }
-        }
-
-        for(int j = 0; j < matrix[0].size(); j++) {
-            if(matrix[0][j] == 0) {
-                row1 = true;
-                break;
-            }
-        }
-
-        for(int i=1;i<matrix.size();i++)
-        {
-            for(int j=1;j<matrix[0].size();j++)
-            {
-                if(matrix[i][j]==0)
+                for(int j=0;j<matrix[0].size();j++)
                 {
-                    matrix[i][0]=0;
-                    matrix[0][j]=0;
-
+                    if(matrix[i][j]==0)
+                    {
+                        row.insert(i);
+                        col.insert(j);
+                    }
+                }
+            }
+            for(int i=0;i<matrix.size();i++)
+            {
+                for(int j=0;j<matrix[0].size();j++)
+                {
+                    if(row.find(i)!=row.end()||col.find(j)!=col.end())
+                    {
+                     matrix[i][j]=0;   
+                    }
                 }
             }
         }
-
-        for(int i=1;i<matrix.size();i++)
-        {
-            for(int j=1;j<matrix[0].size();j++)
-            {
-                if(matrix[i][0]==0 || matrix[0][j]==0)
-                {
-                    matrix[i][j]=0;
-                }
-            }
-        }
-
-         if(row1) {
-            for(int j = 0; j < matrix[0].size(); j++) {
-                matrix[0][j] = 0;
-            }
-        }
-
-        if(col1) {
-            for(int i = 0; i <matrix.size(); i++) {
-                matrix[i][0] = 0;
-            }
-        }
-    }
 };
