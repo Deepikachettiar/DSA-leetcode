@@ -6,23 +6,27 @@ public:
         {
             return arr;
         }
-        int left=0;
-        int right=p.size()-1;
+        int right=p.size();
+        unordered_map<char,int> check;
         unordered_map<char,int> map;
         for(int i=0;i<p.size();i++)
         {
             map[p[i]]++;
+            check[s[i]]++;
         }
-
-        for(int i=0;i<=s.size()-p.size();i++)
-        {
-            unordered_map<char,int> check;
-            int k=i;
-            while(k<=right)
+        if(check==map)
             {
-                check[s[k]]++;
-                k++;
+                arr.push_back(0);
             }
+
+        for(int i=1;i<=s.size()-p.size();i++)
+        {
+            check[s[i-1]]--;
+            if(check[s[i-1]] == 0)
+            {
+                check.erase(s[i-1]);
+            }
+            check[s[right]]++;
             if(check==map)
             {
                 arr.push_back(i);
