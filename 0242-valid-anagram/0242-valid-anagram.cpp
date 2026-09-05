@@ -1,7 +1,6 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-
         if(s.length() != t.length())
         {
             return false;
@@ -13,18 +12,16 @@ public:
         {
             arr[s[i]]++;
             arr[t[i]]--;
+        }
 
-            if(arr[s[i]] == 0)
+        for(auto x : arr)
+        {
+            if(x.second != 0)
             {
-                arr.erase(s[i]);
-            }
-            
-            if(arr.find(t[i]) != arr.end() && arr[t[i]] == 0)
-            {
-                arr.erase(t[i]);
+                return false;
             }
         }
 
-        return arr.empty();
+        return true;
     }
 };
